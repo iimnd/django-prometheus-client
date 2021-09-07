@@ -1,0 +1,23 @@
+# HELP request_counter_total http request counter
+# TYPE request_counter_total counter
+request_counter_total{code="200",method="GET",path="home",version="v.0.1.0"} 1.0
+request_counter_total{code="200",method="GET",path="testing",version="v.0.1.0"} 1.0
+# TYPE request_counter_created gauge
+request_counter_created{code="200",method="GET",path="home",version="v.0.1.0"} 1.631001719121439e+09
+request_counter_created{code="200",method="GET",path="testing",version="v.0.1.0"} 1.631001726774221e+09
+# HELP process_time processing time
+# TYPE process_time histogram
+process_time_bucket{code="200",le="1.0",method="GET",path="home",version="v.0.1.0"} 0.0
+process_time_bucket{code="200",le="3.0",method="GET",path="home",version="v.0.1.0"} 0.0
+process_time_bucket{code="200",le="7.0",method="GET",path="home",version="v.0.1.0"} 0.0
+process_time_bucket{code="200",le="+Inf",method="GET",path="home",version="v.0.1.0"} 1.0
+process_time_count{code="200",method="GET",path="home",version="v.0.1.0"} 1.0
+process_time_sum{code="200",method="GET",path="home",version="v.0.1.0"} 19.0
+# TYPE process_time_created gauge
+process_time_created{code="200",method="GET",path="home",version="v.0.1.0"} 1.631001719121514e+09
+# HELP process_gauge processing gauge
+# TYPE process_gauge gauge
+process_gauge{version="v.0.1.0"} 1.0
+# HELP process_info_info processing info
+# TYPE process_info_info gauge
+
