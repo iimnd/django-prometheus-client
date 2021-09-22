@@ -8,17 +8,17 @@ import random
 from prometheus_client import generate_latest
 
 #import fungsi counter, histgoram yang ada pada app metrics, file service,py
-from metrics.service import c
-from metrics.service import h
+from metrics.service import counter
+from metrics.service import histogram
 from metrics.service import registry
 
 def homePageView(request):
-    n = random.randint(0,22)
+    random_number = random.randint(0,22)
     # statement untuk counter, label disesuaikan dengan variable counter yang sebelumnya sudah di definisikan ['code','method', 'path','version']
-    c.labels('200','GET', 'home', 'v.0.1.0').inc()
+    counter.labels('200','GET', 'home', 'v.0.1.0').inc()
 
     # statement untuk histogram, value yang akan di observe misalnya adalah n (random int) . label disesuaikan dengan variable counter yang sebelumnya sudah di definisikan ['code','method', 'path','version']
-    h.labels('200','GET', 'home', 'v.0.1.0').observe(n)
+    histogram.labels('200','GET', 'home', 'v.0.1.0').observe(random_number)
 
     return HttpResponse('Hello, World!')
 

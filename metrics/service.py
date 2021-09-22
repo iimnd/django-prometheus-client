@@ -14,10 +14,10 @@ registry = CollectorRegistry()
 buckets = [1,3,7]
 
 #mendifinisikan metrics, serta meregister metris pada registry sebelumnya
-c = Counter('request_counter', 'http request counter', ['code','method', 'path','version'],registry=registry)
-h = Histogram('process_time', 'processing time', ['code','method', 'path','version'],registry=registry, buckets=buckets)
-g = Gauge('process_gauge', 'processing gauge', ['version'],registry=registry)
-i = Info('process_info', 'processing info', ['code','method', 'path','version'],registry=registry)
+counter = Counter('request_counter', 'http request counter', ['code','method', 'path','version'],registry=registry)
+histogram = Histogram('process_time', 'processing time', ['code','method', 'path','version'],registry=registry, buckets=buckets)
+gauge = Gauge('process_gauge', 'processing gauge', ['version'],registry=registry)
+info = Info('process_info', 'processing info', ['code','method', 'path','version'],registry=registry)
 
 
-g.labels('v.0.1.0').set(1)
+gauge.labels('v.0.1.0').set(1)
