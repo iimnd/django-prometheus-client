@@ -15,4 +15,11 @@ pip install prometheus-client
 python manage.py runserver
 
 
+
+path : 
+- /ovo
+- /gopay
+- /metrics
+
+
 desktop/django_prome_client
