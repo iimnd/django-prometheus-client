@@ -1,0 +1,4 @@
+Django
+Markdown
+requests
+prometheus-client
