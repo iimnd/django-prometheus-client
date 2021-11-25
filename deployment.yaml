@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: django-demo-prometheus
-        image: iimnd/django-prometheus:1.0.2
+        image: iimnd/django-prometheus:1.0.3
         env:
         - name: VERSION
           value: 2.0.1
